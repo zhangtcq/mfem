@@ -8,8 +8,8 @@
                                http://mfem.org
 
 
-Development version, not released yet
-=====================================
+Development version 3.3.1, not released
+=======================================
 
 - Memory optimizations in the NCMesh class, which now uses 50% less memory.
   The average cost of an NC element in a uniformly refined mesh (including the
