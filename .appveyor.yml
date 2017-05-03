@@ -15,6 +15,11 @@ install:
 - MSMpiSetup.exe -unattend -minimal
 - set PATH=C:\Program Files\Microsoft MPI\Bin;%PATH%
 
+  # Install hypre
+- ps: Start-FileDownload 'https://computation.llnl.gov/project/linear_solvers/download/hypre-2.10.0b.tar.gz'
+- 7z hypre-2.10.0b.tar.gz -so | 7z x -si -ttar > nul
+
+# MFEM
 before_build:
 - cmake . -Bbuild -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
 
