@@ -27,6 +27,7 @@ install:
 #- cmake src -Bcmbuild -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
 - cmake src -Bcmbuild -DCMAKE_BUILD_TYPE=%BUILD_TYPE% -DMPI_C_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -DMPI_C_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include"
 #- cmake --build cmbuild
+- cd ..
 
 # MFEM
 before_build:
