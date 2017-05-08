@@ -16,8 +16,7 @@ install:
 - set PATH=C:\Program Files\Microsoft MPI\Bin;%PATH%
 
 # Install MS-MPI SDK
-https://download.microsoft.com/download/B/2/E/B2EB83FE-98C2-4156-834A-E1711E6884FB/msmpisdk.msi
-- ps: Start-FileDownload 'https://download.microsoft.com/download/B/2/E/B2EB83FE-98C2-4156-834A-E1711E6884FB/MSMpiSetup.exe'
+- ps: Start-FileDownload 'https://download.microsoft.com/download/B/2/E/B2EB83FE-98C2-4156-834A-E1711E6884FB/msmpisdk.msi'
 - msmpisdk.msi /passive
 - set PATH=C:\Program Files\Microsoft MPI\Bin;%PATH%
 
