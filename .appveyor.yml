@@ -20,16 +20,13 @@ install:
 - msmpisdk.msi /passive
 - set PATH=C:\Program Files\Microsoft MPI\Bin;%PATH%
 
-
   # Install hypre
 - ps: Start-FileDownload 'https://computation.llnl.gov/project/linear_solvers/download/hypre-2.10.0b.tar.gz'
 - 7z x hypre-2.10.0b.tar.gz -so | 7z x -si -ttar > nul
 - cd hypre-2.10.0b
-#
 #- cmake src -Bcmbuild -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
-
-cmake src -Bcmbuild -DCMAKE_BUILD_TYPE=%BUILD_TYPE% -DMPI_C_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -DMPI_C_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include"
-- cmake --build cmbuild
+#- cmake src -Bcmbuild -DCMAKE_BUILD_TYPE=%BUILD_TYPE% -DMPI_C_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -DMPI_C_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include"
+#- cmake --build cmbuild
 
 # MFEM
 before_build:
