@@ -3,11 +3,6 @@ version: '{build}'
 # https://www.appveyor.com/docs/build-environment/#build-worker-images
 image: Visual Studio 2013
 
-environment:
-   matrix:
-   - MPI=NO
-   - MPI=YES
-
 install:
 
 # Install MS-MPI
