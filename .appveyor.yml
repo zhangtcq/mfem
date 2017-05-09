@@ -36,7 +36,7 @@ install:
 
 # MFEM
 before_build:
-- cmake . -Bbuild -DMFEM_USE_MPI=TRUE -DMPI_CXX_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -DHYPRE_DIR=hypre-2.10.0b\src\hypre\lib -DHYPRE_INCLUDE_DIRS=hypre-2.10.0b\src\hypre\include -DHYPRE_VERSION=2.10.0b -DMETIS_LIBRARIES=metis-5.1.0\build\libmetis\Debug -DMETIS_INCLUDE_DIRS=metis-5.1.0
+- cmake . -Bbuild -DMFEM_USE_MPI=TRUE -DMPI_CXX_LIBRARIES="C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" -DMPI_CXX_INCLUDE_PATH="C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -DHYPRE_DIR=hypre-2.10.0b\src\hypre\lib -DHYPRE_INCLUDE_DIRS=hypre-2.10.0b\src\hypre\include -DHYPRE_VERSION=21000 -DMETIS_LIBRARIES=metis-5.1.0\build\libmetis\Debug -DMETIS_INCLUDE_DIRS=metis-5.1.0
 #- cmake . -Bbuild -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
 
 
